@@ -152,7 +152,7 @@ module.exports = async (repository, sourceDir, installDir, cmake, cmakeOptions, 
                 ...env,
                 ...(test ? { 'CTEST_OUTPUT_ON_FAILURE': '1' } : {}),  // show output of failing tests only
                 CMAKE_BUILD_PARALLEL_LEVEL: '2',  // default for Github runners, equals `-j2`
-                CTEST_PARALLEL_LEVEL: '2',  // default for Github runners, equals `-j2`
+                CTEST_PARALLEL_LEVEL: '1',  // default for Github runners, equals `-j2`
             },
         };
 
